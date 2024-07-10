@@ -27,6 +27,7 @@
     "@nestjs/platform-express": "^10.3.10",
     "apollo-server-express": "^3.13.0",
     "class-validator": "^0.14.1",
+    "dotenv": "^16.4.5",
     "graphql": "^16.9.0",
     "graphql-tools": "^9.0.1",
     "mongoose": "^8.5.0",

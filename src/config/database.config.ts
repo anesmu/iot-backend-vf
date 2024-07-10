@@ -1,5 +1,8 @@
 import { MongooseModuleOptions } from '@nestjs/mongoose'
 
-export const getMongoConfig = (): MongooseModuleOptions => ({
-  uri: 'mongodb+srv://anesmu:fYdGKQfVn59uHPxv@iot.w5ratxv.mongodb.net/iot?retryWrites=true&w=majority&appName=IOT',
-})
+export const getMongoConfig = (): MongooseModuleOptions => {
+  const uri = process.env.MONGODB_URI || 'mongodb://localhost/iot'
+  return {
+    uri,
+  }
+}
