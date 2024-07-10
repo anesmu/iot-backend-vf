@@ -3,19 +3,19 @@ import { Document } from 'mongoose'
 
 @Schema({ collection: 'devices' })
 export class Device extends Document {
-  @Prop({ required: true })
+  @Prop()
   name: string
 
-  @Prop({ required: true })
+  @Prop()
   mobileNumber: string
 
-  @Prop({ required: true })
+  @Prop()
   lastConnection: string
 
-  @Prop({ required: true })
+  @Prop()
   latitude: number
 
-  @Prop({ required: true })
+  @Prop()
   longitude: number
 }
 

@@ -1,22 +1,22 @@
-import { IsNotEmpty, IsString, IsNumber } from 'class-validator'
+import { IsString, IsNumber, IsOptional } from 'class-validator'
 
 export class CreateDeviceDto {
-  @IsNotEmpty()
   @IsString()
+  @IsOptional()
   name: string
 
-  @IsNotEmpty()
   @IsString()
+  @IsOptional()
   mobileNumber: string
 
-  @IsNotEmpty()
+  @IsOptional()
   lastConnection: string
 
-  @IsNotEmpty()
   @IsNumber()
+  @IsOptional()
   latitude: number
 
-  @IsNotEmpty()
   @IsNumber()
+  @IsOptional()
   longitude: number
 }

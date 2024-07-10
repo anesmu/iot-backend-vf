@@ -16,6 +16,7 @@ export class DevicesResolver {
 
   @Query(() => Device, { name: 'device' })
   async findOne(@Args('id') id: string): Promise<DeviceInterface> {
+    console.log('findOne id:', id)
     return this.devicesService.findOne(id)
   }
 
@@ -23,6 +24,7 @@ export class DevicesResolver {
   async createDevice(
     @Args('createDeviceInput') createDeviceInput: CreateDeviceDto,
   ): Promise<DeviceInterface> {
+    console.log('createDevice input:', createDeviceInput)
     return this.devicesService.create(createDeviceInput)
   }
 
@@ -31,11 +33,14 @@ export class DevicesResolver {
     @Args('id') id: string,
     @Args('updateDeviceInput') updateDeviceInput: UpdateDeviceDto,
   ): Promise<DeviceInterface> {
+    console.log('updateDevice id:', id)
+    console.log('updateDevice input:', updateDeviceInput)
     return this.devicesService.update(id, updateDeviceInput)
   }
 
   @Mutation(() => Boolean)
   async deleteDevice(@Args('id') id: string): Promise<boolean> {
+    console.log('deleteDevice id:', id)
     await this.devicesService.remove(id)
     return true
   }

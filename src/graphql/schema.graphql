@@ -1,18 +1,18 @@
 type Device {
   id: ID!
-  name: String!
-  mobileNumber: String!
-  lastConnection: String!
-  latitude: Float!
-  longitude: Float!
+  name: String
+  mobileNumber: String
+  lastConnection: String
+  latitude: Float
+  longitude: Float
 }
 
 input CreateDeviceInput {
-  name: String!
-  mobileNumber: String!
-  lastConnection: String!
-  latitude: Float!
-  longitude: Float!
+  name: String
+  mobileNumber: String
+  lastConnection: String
+  latitude: Float
+  longitude: Float
 }
 
 input UpdateDeviceInput {
